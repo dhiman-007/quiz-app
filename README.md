@@ -4,3 +4,6 @@ I fetch this Value through the program to render it into HTML DOM.
 Fetch user responses through Select Ids and created an String by this.
 Matched the String with Correct Answers.
 Created an String to display the right Response and user Answer to make the user More Informatic
+
+
+App link: https://dhiman-007.github.io/quiz-app-using-java-script/
