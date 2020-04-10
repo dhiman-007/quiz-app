@@ -201,8 +201,7 @@ function checkSecond(sec) {
 	document.getElementById("Answer2").innerHTML= "Number of Attempted Question: <br/> " + (myQuestion.length-un) ;
 	document.getElementById("Answer3").innerHTML= "Number of Wrong Answer: <br/> " + wrong ;
 	document.getElementById("Answer4").innerHTML= output.toString();
-	
-	
+		
   function download(filename, text) {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -216,6 +215,7 @@ function checkSecond(sec) {
 	var userName= username_name; 
 	download(userName+".txt",text);
 }
+
 
 </script>
 </body>
