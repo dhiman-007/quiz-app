@@ -6,6 +6,18 @@ position: -webkit-sticky;
 
 }
 
+.show {
+	background: black;
+	font-family: 'stenciletta-solid', sans-serif;
+	padding: 10px 15px;
+	margin-top: 50px;
+	margin-bottom: 15px;
+	margin-top: 0;
+	padding-left: 25px;
+	padding-right: 25px;
+	color: white	
+}
+
 #basic_info{
  height:auto; 
 width: 700;
@@ -72,7 +84,7 @@ box-sizing: border-box;
 }
 
 #start-quiz, #result-quiz {
-background-color:#f44336;;
+background-color:black;
 border: 1px solid white;
 color: white;
 padding: 15px 18px;
@@ -87,14 +99,14 @@ cursor: pointer;
 
 
 #start-quiz:hover {
-background-color:  red;
-color: white;
+background-color: white;
+color: black;
 font-size: 18px;
 }
 
 #result-quiz:hover {
-background-color: red;
-color: white;
+background-color:white;
+color: black;
 font-size: 18px;
 }
 
