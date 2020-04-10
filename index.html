@@ -196,20 +196,7 @@ function checkSecond(sec) {
 	document.getElementById("Answer3").innerHTML= "Number of Wrong Answer: <br/> " + wrong ;
 	document.getElementById("Answer4").innerHTML= output.toString();
 	
-	
-  function download(filename, text) {
-  var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-  element.setAttribute('download', filename);
-  element.style.display = 'none';
-  document.body.appendChild(element);
-  element.click();
-  document.body.removeChild(element);
-}
-	var text= "Hi, "+ username_name+ " Your Score is "+ c + " out of "+ myQuestion.length + ". Thanks for taking this Quiz. ";
-	var userName= username_name; 
-	download(userName+".txt",text);
-}
+
 
 </script>
 </body>
