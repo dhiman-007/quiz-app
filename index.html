@@ -11,7 +11,16 @@
 </head>
 <body align="center" oncopy="return false" oncut="return false" onpaste="return false">
 
-			<div id="edge" class="lr animated fadeInLeftBig" style="display:none;" >
+			
+	<div id="main">
+		<div id="basic_info" style="display: none; position: fixed;">
+		<p id="name_value" style="display: none;  font-size: 25px;color:white; font-weight: 900; font-style: italic; font-family:verdana;"/>
+		<p class="jj animated fadeInLeftBig" id="started" style="color: white; font-size: 24px;"/><br><br><br>
+		<h3 id="time_left" style="display: none;"> Time Left </h3>
+		<p id="timer" style="display: none; marign-left: 200px; color:white;"> </p>
+		</div>
+		
+		<div id="edge" class="lr animated fadeInLeftBig" style="display:none;" >
 			<p id="Answer0" style="color: black;"></p>
 			<p id="Answer1" style="color: green;"></p>
 			<p id="Answer2"></p>
@@ -19,12 +28,6 @@
 			<p id="Answer4" style="color: red ;"></p>
 
 			</div>
-		<div id="basic_info" style="display: none; position: fixed;">
-		<p id="name_value" style="display: none;  font-size: 25px;color:white; font-weight: 900; font-style: italic; font-family:verdana;"/>
-		<p class="jj animated fadeInLeftBig" id="started" style="color: white; font-size: 24px;"/><br><br><br>
-		<h3 id="time_left" style="display: none;"> Time Left </h3>
-		<p id="timer" style="display: none; marign-left: 200px; color:white;"> </p>
-		</div>
 		
 		<div id="show-question">
 		<br><br><br>
@@ -36,7 +39,10 @@
 		<span>4: If solved above 75%, You will <br> be  eligible for Scholarship program.</span><br><br> 5. Test will auto submitted if time gets Over.</p><br><br>
 		<button id="start-quiz" onclick="show()" style="margin-top:10px;">Start Your Quiz</button>
 		</div>
-		<button id="result-quiz" onclick="ResultQuiz()" style="display: none; margin-left:590px; margin-top:0px;">Get Your result</button><br/><br/>
+		<button id="result-quiz" onclick="ResultQuiz()" style="display: none; margin: 0px auto;">Get Your result</button><br/><br/>
+		</div>
+
+
 
 <script>
 var username_name;

@@ -1,11 +1,18 @@
 
 
+#main{
+ height:auto; 
+width: 700;
+margin: 0px auto;
+position: sticky;
+
+position: -webkit-sticky;
+}
+
 #basic_info{
  height:auto; 
 width: 700;
-margin-top: -209px;
-margin-right: auto;/*centres in compliant browsers*/
-margin-left: 317px;
+margin: 0px auto;
 background-color: black;
 color: white;
 
@@ -16,14 +23,12 @@ color: white;
 #show-question{
 height: auto; 
 width: 600;
-margin-top: 209px;
-margin-right: auto;
-margin-left: auto;
+margin: 0px auto;
 background-color: #d8e2e6;
 font-family:Arial, Helvetica, sans-serif;
 font-size:17px;
 font-weight:550;
-background-attachment: fixed
+
 
 
 }
@@ -32,10 +37,8 @@ background-attachment: fixed
 background: white;
 width: 500px;
 height: auto;
-margin-top: 100px;
-margin-left: 410px;
-border-radius: 25px;
-border: 2px solid #73AD21;
+margin: 0px auto;
+border: 5px solid #73AD21;
 }
 
 
