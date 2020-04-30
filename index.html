@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <meta charset="UTF-8">
@@ -6,10 +7,11 @@
  <!-- bootstrap css -->
  <link rel="stylesheet" href="css/bootstrap.min.css">
 <script src="ext.js"></script>
+<script src="database.js"></script>
 <link rel="stylesheet" href="animate.css">
 <link rel="stylesheet" href="quizCss.css">
 </head>
-<body align="center" oncopy="return false" oncut="return false" onpaste="return false">
+<body align="center" id="img" oncopy="copy()" onpaste="copy()" oncut="return false" onpaste="return false">
 
 			
 	<div id="main">
@@ -42,13 +44,18 @@
 			<p id="Answer3"></p><br><br>
 			<p id="Answer4" style="color: red ;"></p>
 
-			</div>
 		</div>
+	</div>
 
 
 
 <script>
 var username_name;
+
+function copy(){
+	alert("Copy and Paste is restricted");
+}
+
  window.onload = function() {
     document.addEventListener("contextmenu", function(e){
       e.preventDefault();
@@ -167,6 +174,7 @@ function checkSecond(sec) {
 	
 	function ResultQuiz(){
 	
+		
 	var answers_user="", answers="", i=0, l , m, out_var, out_var_user, un=0, c=0, wrong=0, output="";
 	for( i=0; i < myQuestion.length; i++){
 		answers+=myQuestion[i].correctAnswer;
@@ -198,13 +206,14 @@ function checkSecond(sec) {
 	document.getElementById("show-question").style.display="none";	
 	document.getElementById("basic_info").style.display="none";	
 	document.getElementById("result-quiz").style.display="none";
+	
 	document.getElementById("edge").style.display="block";	
-    <!-- document.getElementById("Answer0").innerHTML= "Hello " + document.getElementById("Name").value;  -->
 	document.getElementById("Answer1").innerHTML= "Quiz is Over: <br/><br/> Your result is: <br/> " + c + " out of " + myQuestion.length;  
 	document.getElementById("Answer2").innerHTML= "Number of Attempted Question: <br/> " + (myQuestion.length-un) ;
 	document.getElementById("Answer3").innerHTML= "Number of Wrong Answer: <br/> " + wrong ;
 	document.getElementById("Answer4").innerHTML= output.toString();
-		
+
+	
   function download(filename, text) {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -219,6 +228,8 @@ function checkSecond(sec) {
 	download(userName+".txt",text);
 }
 
+
+	
 
 </script>
 </body>
