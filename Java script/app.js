@@ -5,44 +5,7 @@ function copy(){
 	alert("Copy and Paste is restricted");
 }
 
-window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-    
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-     
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      
-      if (event.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-
-function show(){
+const show =()=>{
 var z1=0;
  username_name=document.getElementById("Name").value;
 	if(username_name.length==0){
@@ -56,12 +19,12 @@ var z1=0;
 	}
 }
 
-function hide(){	
+const hide = () =>{	
     document.getElementById("myDiv").style.display="none";
 	setTimeout("startQuiz()", 0100);
 }
 
-function startQuiz(){
+const startQuiz =() => {
 
 document.getElementById("NameHere").style.display="none";
 document.getElementById("Name").style.display="none";
@@ -120,7 +83,7 @@ function checkSecond(sec) {
 	}
 	
 	
-	function ResultQuiz(){
+	const ResultQuiz = () =>{
 	
 		
 	var answers_user="", answers="", i=0, l , m, out_var, out_var_user, un=0, c=0, wrong=0, output="";
@@ -175,4 +138,43 @@ function checkSecond(sec) {
 	// var userName= username_name; 
 	// download(userName+".txt",text);
 }
+
+
+window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+    
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+     
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+
 
