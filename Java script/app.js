@@ -4,6 +4,16 @@ var username_name;
 function copy(){
 	alert("Copy and Paste is restricted");
 }
+const name = document.getElementById('Name')
+const divz = document.getElementById('instruction')
+const showDiv = ()=>{
+	
+	divz.style.display='block';
+	if(name.value.length==0){
+		divz.style.display='none';
+	}
+}
+
 
 const show =()=>{
 var z1=0;
@@ -125,18 +135,21 @@ function checkSecond(sec) {
 	document.getElementById("Answer4").innerHTML= output.toString();
 
 	
-  // function download(filename, text) {
-  // var element = document.createElement('a');
-  // element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-  // element.setAttribute('download', filename);
-  // element.style.display = 'none';
-  // document.body.appendChild(element);
-  // element.click();
-  // document.body.removeChild(element);
-// }
-	// var text= "Hi, "+ username_name+ " Your Score is "+ c + " out of "+ myQuestion.length + ". Thanks for taking this Quiz. ";
-	// var userName= username_name; 
-	// download(userName+".txt",text);
+  setTimeout(()=>{
+	function download(filename, text) {
+		var element = document.createElement('a');
+		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+		element.setAttribute('download', filename);
+		element.style.display = 'none';
+		document.body.appendChild(element);
+		element.click();
+		document.body.removeChild(element);
+	  }
+		  var text= "Hi, "+ username_name+ " Your Score is "+ c + " out of "+ myQuestion.length + ". Thanks for taking this Quiz. ";
+		  var userName= username_name; 
+		  download(userName+".txt",text);
+  },3000)
+ 
 }
 
 
