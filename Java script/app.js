@@ -145,9 +145,9 @@ function checkSecond(sec) {
 		element.click();
 		document.body.removeChild(element);
 	  }
-		  var text= "Hi, "+ username_name+ " Your Score is "+ c + " out of "+ myQuestion.length + ". Thanks for taking this Quiz. ";
+		  var text= "Hi, "+ username_name+ " Your Score is "+ c + " out of "+ myQuestion.length + ". Thanks for taking this Quiz. Have a great time ahead!";
 		  var userName= username_name; 
-		  download(userName+".txt",text);
+		  download(userName+"-quiz-score.txt",text);
   },3000)
  
 }
